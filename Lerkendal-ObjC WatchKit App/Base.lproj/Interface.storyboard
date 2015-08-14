@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8173.3" systemVersion="15A243d" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tvU-L1-ZTT">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8089"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="Dul-Rr-T2s">
+            <objects>
+                <controller id="tvU-L1-ZTT" customClass="InterfaceController">
+                    <items>
+                        <label alignment="left" text="Status:" id="IHz-xV-eDZ">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <label alignment="left" text="Vaskemaskiner:" id="Fkd-qZ-GnW">
+                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                        </label>
+                        <label width="136" alignment="left" text="..." id="BGJ-14-Yic">
+                            <fontDescription key="font" type="italicSystem" pointSize="16"/>
+                        </label>
+                        <label alignment="left" text="Tørketrommler:" id="QNy-ze-Bmn">
+                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                        </label>
+                        <label alignment="left" text="..." id="Fej-Kb-ge9">
+                            <fontDescription key="font" type="italicSystem" pointSize="16"/>
+                        </label>
+                        <label alignment="left" text="Stor vaskemaskin:" id="v0G-fn-HAt">
+                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                        </label>
+                        <label alignment="left" text="..." id="lQx-ic-R8q">
+                            <fontDescription key="font" type="italicSystem" pointSize="16"/>
+                        </label>
+                    </items>
+                    <menu key="menu" id="Axy-ae-adk">
+                        <items>
+                            <menuItem title="Refresh" icon="repeat" id="0sd-E5-15C">
+                                <connections>
+                                    <action selector="refreshButton" destination="tvU-L1-ZTT" id="KhZ-hM-e7m"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="availableDryers" destination="Fej-Kb-ge9" id="WNc-88-gMX"/>
+                        <outlet property="availableLargeWashers" destination="lQx-ic-R8q" id="ih0-gr-uN1"/>
+                        <outlet property="availableWashers" destination="BGJ-14-Yic" id="0zI-c8-cSS"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="179" y="368"/>
+        </scene>
+    </scenes>
+</document>

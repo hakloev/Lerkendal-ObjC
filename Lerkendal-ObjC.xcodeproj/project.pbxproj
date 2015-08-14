@@ -1,0 +1,792 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07C7BB0F1B7DE7EA001EE3EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C7BB0E1B7DE7EA001EE3EE /* main.m */; };
+		07C7BB121B7DE7EA001EE3EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C7BB111B7DE7EA001EE3EE /* AppDelegate.m */; };
+		07C7BB151B7DE7EA001EE3EE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C7BB141B7DE7EA001EE3EE /* ViewController.m */; };
+		07C7BB181B7DE7EA001EE3EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07C7BB161B7DE7EA001EE3EE /* Main.storyboard */; };
+		07C7BB1A1B7DE7EA001EE3EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C7BB191B7DE7EA001EE3EE /* Assets.xcassets */; };
+		07C7BB1D1B7DE7EA001EE3EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07C7BB1B1B7DE7EA001EE3EE /* LaunchScreen.storyboard */; };
+		07C7BB281B7DE7EA001EE3EE /* Lerkendal_ObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C7BB271B7DE7EA001EE3EE /* Lerkendal_ObjCTests.m */; };
+		07C7BB331B7DE7EA001EE3EE /* Lerkendal_ObjCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C7BB321B7DE7EA001EE3EE /* Lerkendal_ObjCUITests.m */; };
+		07C7BB381B7DE7EA001EE3EE /* Lerkendal-ObjC WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 07C7BB371B7DE7EA001EE3EE /* Lerkendal-ObjC WatchKit App.app */; };
+		07C7BB3E1B7DE7EA001EE3EE /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07C7BB3C1B7DE7EA001EE3EE /* Interface.storyboard */; };
+		07C7BB401B7DE7EA001EE3EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C7BB3F1B7DE7EA001EE3EE /* Assets.xcassets */; };
+		07C7BB471B7DE7EA001EE3EE /* Lerkendal-ObjC WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 07C7BB461B7DE7EA001EE3EE /* Lerkendal-ObjC WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		07C7BB4D1B7DE7EA001EE3EE /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C7BB4C1B7DE7EA001EE3EE /* InterfaceController.m */; };
+		07C7BB501B7DE7EA001EE3EE /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C7BB4F1B7DE7EA001EE3EE /* ExtensionDelegate.m */; };
+		07C7BB531B7DE7EA001EE3EE /* ComplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C7BB521B7DE7EA001EE3EE /* ComplicationController.m */; };
+		07C7BB551B7DE7EA001EE3EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C7BB541B7DE7EA001EE3EE /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		07C7BB241B7DE7EA001EE3EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07C7BB021B7DE7E9001EE3EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07C7BB091B7DE7EA001EE3EE;
+			remoteInfo = "Lerkendal-ObjC";
+		};
+		07C7BB2F1B7DE7EA001EE3EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07C7BB021B7DE7E9001EE3EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07C7BB091B7DE7EA001EE3EE;
+			remoteInfo = "Lerkendal-ObjC";
+		};
+		07C7BB391B7DE7EA001EE3EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07C7BB021B7DE7E9001EE3EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07C7BB361B7DE7EA001EE3EE;
+			remoteInfo = "Lerkendal-ObjC WatchKit App";
+		};
+		07C7BB481B7DE7EA001EE3EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07C7BB021B7DE7E9001EE3EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07C7BB451B7DE7EA001EE3EE;
+			remoteInfo = "Lerkendal-ObjC WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		07C7BB5C1B7DE7EA001EE3EE /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				07C7BB471B7DE7EA001EE3EE /* Lerkendal-ObjC WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07C7BB601B7DE7EA001EE3EE /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				07C7BB381B7DE7EA001EE3EE /* Lerkendal-ObjC WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		07C7BB0A1B7DE7EA001EE3EE /* Lerkendal-ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lerkendal-ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07C7BB0E1B7DE7EA001EE3EE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		07C7BB101B7DE7EA001EE3EE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		07C7BB111B7DE7EA001EE3EE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		07C7BB131B7DE7EA001EE3EE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		07C7BB141B7DE7EA001EE3EE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		07C7BB171B7DE7EA001EE3EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		07C7BB191B7DE7EA001EE3EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		07C7BB1C1B7DE7EA001EE3EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		07C7BB1E1B7DE7EA001EE3EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07C7BB231B7DE7EA001EE3EE /* Lerkendal-ObjCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lerkendal-ObjCTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07C7BB271B7DE7EA001EE3EE /* Lerkendal_ObjCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lerkendal_ObjCTests.m; sourceTree = "<group>"; };
+		07C7BB291B7DE7EA001EE3EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07C7BB2E1B7DE7EA001EE3EE /* Lerkendal-ObjCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lerkendal-ObjCUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07C7BB321B7DE7EA001EE3EE /* Lerkendal_ObjCUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lerkendal_ObjCUITests.m; sourceTree = "<group>"; };
+		07C7BB341B7DE7EA001EE3EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07C7BB371B7DE7EA001EE3EE /* Lerkendal-ObjC WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lerkendal-ObjC WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07C7BB3D1B7DE7EA001EE3EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		07C7BB3F1B7DE7EA001EE3EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		07C7BB411B7DE7EA001EE3EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07C7BB461B7DE7EA001EE3EE /* Lerkendal-ObjC WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Lerkendal-ObjC WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07C7BB4B1B7DE7EA001EE3EE /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		07C7BB4C1B7DE7EA001EE3EE /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		07C7BB4E1B7DE7EA001EE3EE /* ExtensionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionDelegate.h; sourceTree = "<group>"; };
+		07C7BB4F1B7DE7EA001EE3EE /* ExtensionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
+		07C7BB511B7DE7EA001EE3EE /* ComplicationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComplicationController.h; sourceTree = "<group>"; };
+		07C7BB521B7DE7EA001EE3EE /* ComplicationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComplicationController.m; sourceTree = "<group>"; };
+		07C7BB541B7DE7EA001EE3EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		07C7BB561B7DE7EA001EE3EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		07C7BB071B7DE7EA001EE3EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07C7BB201B7DE7EA001EE3EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07C7BB2B1B7DE7EA001EE3EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07C7BB431B7DE7EA001EE3EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07C7BB011B7DE7E9001EE3EE = {
+			isa = PBXGroup;
+			children = (
+				07C7BB0C1B7DE7EA001EE3EE /* Lerkendal-ObjC */,
+				07C7BB261B7DE7EA001EE3EE /* Lerkendal-ObjCTests */,
+				07C7BB311B7DE7EA001EE3EE /* Lerkendal-ObjCUITests */,
+				07C7BB3B1B7DE7EA001EE3EE /* Lerkendal-ObjC WatchKit App */,
+				07C7BB4A1B7DE7EA001EE3EE /* Lerkendal-ObjC WatchKit Extension */,
+				07C7BB0B1B7DE7EA001EE3EE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		07C7BB0B1B7DE7EA001EE3EE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07C7BB0A1B7DE7EA001EE3EE /* Lerkendal-ObjC.app */,
+				07C7BB231B7DE7EA001EE3EE /* Lerkendal-ObjCTests.xctest */,
+				07C7BB2E1B7DE7EA001EE3EE /* Lerkendal-ObjCUITests.xctest */,
+				07C7BB371B7DE7EA001EE3EE /* Lerkendal-ObjC WatchKit App.app */,
+				07C7BB461B7DE7EA001EE3EE /* Lerkendal-ObjC WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		07C7BB0C1B7DE7EA001EE3EE /* Lerkendal-ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				07C7BB101B7DE7EA001EE3EE /* AppDelegate.h */,
+				07C7BB111B7DE7EA001EE3EE /* AppDelegate.m */,
+				07C7BB131B7DE7EA001EE3EE /* ViewController.h */,
+				07C7BB141B7DE7EA001EE3EE /* ViewController.m */,
+				07C7BB161B7DE7EA001EE3EE /* Main.storyboard */,
+				07C7BB191B7DE7EA001EE3EE /* Assets.xcassets */,
+				07C7BB1B1B7DE7EA001EE3EE /* LaunchScreen.storyboard */,
+				07C7BB1E1B7DE7EA001EE3EE /* Info.plist */,
+				07C7BB0D1B7DE7EA001EE3EE /* Supporting Files */,
+			);
+			path = "Lerkendal-ObjC";
+			sourceTree = "<group>";
+		};
+		07C7BB0D1B7DE7EA001EE3EE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07C7BB0E1B7DE7EA001EE3EE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		07C7BB261B7DE7EA001EE3EE /* Lerkendal-ObjCTests */ = {
+			isa = PBXGroup;
+			children = (
+				07C7BB271B7DE7EA001EE3EE /* Lerkendal_ObjCTests.m */,
+				07C7BB291B7DE7EA001EE3EE /* Info.plist */,
+			);
+			path = "Lerkendal-ObjCTests";
+			sourceTree = "<group>";
+		};
+		07C7BB311B7DE7EA001EE3EE /* Lerkendal-ObjCUITests */ = {
+			isa = PBXGroup;
+			children = (
+				07C7BB321B7DE7EA001EE3EE /* Lerkendal_ObjCUITests.m */,
+				07C7BB341B7DE7EA001EE3EE /* Info.plist */,
+			);
+			path = "Lerkendal-ObjCUITests";
+			sourceTree = "<group>";
+		};
+		07C7BB3B1B7DE7EA001EE3EE /* Lerkendal-ObjC WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				07C7BB3C1B7DE7EA001EE3EE /* Interface.storyboard */,
+				07C7BB3F1B7DE7EA001EE3EE /* Assets.xcassets */,
+				07C7BB411B7DE7EA001EE3EE /* Info.plist */,
+			);
+			path = "Lerkendal-ObjC WatchKit App";
+			sourceTree = "<group>";
+		};
+		07C7BB4A1B7DE7EA001EE3EE /* Lerkendal-ObjC WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				07C7BB4B1B7DE7EA001EE3EE /* InterfaceController.h */,
+				07C7BB4C1B7DE7EA001EE3EE /* InterfaceController.m */,
+				07C7BB4E1B7DE7EA001EE3EE /* ExtensionDelegate.h */,
+				07C7BB4F1B7DE7EA001EE3EE /* ExtensionDelegate.m */,
+				07C7BB511B7DE7EA001EE3EE /* ComplicationController.h */,
+				07C7BB521B7DE7EA001EE3EE /* ComplicationController.m */,
+				07C7BB541B7DE7EA001EE3EE /* Assets.xcassets */,
+				07C7BB561B7DE7EA001EE3EE /* Info.plist */,
+			);
+			path = "Lerkendal-ObjC WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		07C7BB091B7DE7EA001EE3EE /* Lerkendal-ObjC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07C7BB611B7DE7EA001EE3EE /* Build configuration list for PBXNativeTarget "Lerkendal-ObjC" */;
+			buildPhases = (
+				07C7BB061B7DE7EA001EE3EE /* Sources */,
+				07C7BB071B7DE7EA001EE3EE /* Frameworks */,
+				07C7BB081B7DE7EA001EE3EE /* Resources */,
+				07C7BB601B7DE7EA001EE3EE /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07C7BB3A1B7DE7EA001EE3EE /* PBXTargetDependency */,
+			);
+			name = "Lerkendal-ObjC";
+			productName = "Lerkendal-ObjC";
+			productReference = 07C7BB0A1B7DE7EA001EE3EE /* Lerkendal-ObjC.app */;
+			productType = "com.apple.product-type.application";
+		};
+		07C7BB221B7DE7EA001EE3EE /* Lerkendal-ObjCTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07C7BB641B7DE7EA001EE3EE /* Build configuration list for PBXNativeTarget "Lerkendal-ObjCTests" */;
+			buildPhases = (
+				07C7BB1F1B7DE7EA001EE3EE /* Sources */,
+				07C7BB201B7DE7EA001EE3EE /* Frameworks */,
+				07C7BB211B7DE7EA001EE3EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07C7BB251B7DE7EA001EE3EE /* PBXTargetDependency */,
+			);
+			name = "Lerkendal-ObjCTests";
+			productName = "Lerkendal-ObjCTests";
+			productReference = 07C7BB231B7DE7EA001EE3EE /* Lerkendal-ObjCTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		07C7BB2D1B7DE7EA001EE3EE /* Lerkendal-ObjCUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07C7BB671B7DE7EA001EE3EE /* Build configuration list for PBXNativeTarget "Lerkendal-ObjCUITests" */;
+			buildPhases = (
+				07C7BB2A1B7DE7EA001EE3EE /* Sources */,
+				07C7BB2B1B7DE7EA001EE3EE /* Frameworks */,
+				07C7BB2C1B7DE7EA001EE3EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07C7BB301B7DE7EA001EE3EE /* PBXTargetDependency */,
+			);
+			name = "Lerkendal-ObjCUITests";
+			productName = "Lerkendal-ObjCUITests";
+			productReference = 07C7BB2E1B7DE7EA001EE3EE /* Lerkendal-ObjCUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		07C7BB361B7DE7EA001EE3EE /* Lerkendal-ObjC WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07C7BB5D1B7DE7EA001EE3EE /* Build configuration list for PBXNativeTarget "Lerkendal-ObjC WatchKit App" */;
+			buildPhases = (
+				07C7BB351B7DE7EA001EE3EE /* Resources */,
+				07C7BB5C1B7DE7EA001EE3EE /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07C7BB491B7DE7EA001EE3EE /* PBXTargetDependency */,
+			);
+			name = "Lerkendal-ObjC WatchKit App";
+			productName = "Lerkendal-ObjC WatchKit App";
+			productReference = 07C7BB371B7DE7EA001EE3EE /* Lerkendal-ObjC WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		07C7BB451B7DE7EA001EE3EE /* Lerkendal-ObjC WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07C7BB591B7DE7EA001EE3EE /* Build configuration list for PBXNativeTarget "Lerkendal-ObjC WatchKit Extension" */;
+			buildPhases = (
+				07C7BB421B7DE7EA001EE3EE /* Sources */,
+				07C7BB431B7DE7EA001EE3EE /* Frameworks */,
+				07C7BB441B7DE7EA001EE3EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Lerkendal-ObjC WatchKit Extension";
+			productName = "Lerkendal-ObjC WatchKit Extension";
+			productReference = 07C7BB461B7DE7EA001EE3EE /* Lerkendal-ObjC WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		07C7BB021B7DE7E9001EE3EE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Håkon Løvdal";
+				TargetAttributes = {
+					07C7BB091B7DE7EA001EE3EE = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 83M6ZS282T;
+					};
+					07C7BB221B7DE7EA001EE3EE = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 83M6ZS282T;
+						TestTargetID = 07C7BB091B7DE7EA001EE3EE;
+					};
+					07C7BB2D1B7DE7EA001EE3EE = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 83M6ZS282T;
+						TestTargetID = 07C7BB091B7DE7EA001EE3EE;
+					};
+					07C7BB361B7DE7EA001EE3EE = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 83M6ZS282T;
+					};
+					07C7BB451B7DE7EA001EE3EE = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 83M6ZS282T;
+					};
+				};
+			};
+			buildConfigurationList = 07C7BB051B7DE7E9001EE3EE /* Build configuration list for PBXProject "Lerkendal-ObjC" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 07C7BB011B7DE7E9001EE3EE;
+			productRefGroup = 07C7BB0B1B7DE7EA001EE3EE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				07C7BB091B7DE7EA001EE3EE /* Lerkendal-ObjC */,
+				07C7BB221B7DE7EA001EE3EE /* Lerkendal-ObjCTests */,
+				07C7BB2D1B7DE7EA001EE3EE /* Lerkendal-ObjCUITests */,
+				07C7BB361B7DE7EA001EE3EE /* Lerkendal-ObjC WatchKit App */,
+				07C7BB451B7DE7EA001EE3EE /* Lerkendal-ObjC WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		07C7BB081B7DE7EA001EE3EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07C7BB1D1B7DE7EA001EE3EE /* LaunchScreen.storyboard in Resources */,
+				07C7BB1A1B7DE7EA001EE3EE /* Assets.xcassets in Resources */,
+				07C7BB181B7DE7EA001EE3EE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07C7BB211B7DE7EA001EE3EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07C7BB2C1B7DE7EA001EE3EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07C7BB351B7DE7EA001EE3EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07C7BB401B7DE7EA001EE3EE /* Assets.xcassets in Resources */,
+				07C7BB3E1B7DE7EA001EE3EE /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07C7BB441B7DE7EA001EE3EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07C7BB551B7DE7EA001EE3EE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		07C7BB061B7DE7EA001EE3EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07C7BB151B7DE7EA001EE3EE /* ViewController.m in Sources */,
+				07C7BB121B7DE7EA001EE3EE /* AppDelegate.m in Sources */,
+				07C7BB0F1B7DE7EA001EE3EE /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07C7BB1F1B7DE7EA001EE3EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07C7BB281B7DE7EA001EE3EE /* Lerkendal_ObjCTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07C7BB2A1B7DE7EA001EE3EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07C7BB331B7DE7EA001EE3EE /* Lerkendal_ObjCUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07C7BB421B7DE7EA001EE3EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07C7BB531B7DE7EA001EE3EE /* ComplicationController.m in Sources */,
+				07C7BB501B7DE7EA001EE3EE /* ExtensionDelegate.m in Sources */,
+				07C7BB4D1B7DE7EA001EE3EE /* InterfaceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		07C7BB251B7DE7EA001EE3EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07C7BB091B7DE7EA001EE3EE /* Lerkendal-ObjC */;
+			targetProxy = 07C7BB241B7DE7EA001EE3EE /* PBXContainerItemProxy */;
+		};
+		07C7BB301B7DE7EA001EE3EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07C7BB091B7DE7EA001EE3EE /* Lerkendal-ObjC */;
+			targetProxy = 07C7BB2F1B7DE7EA001EE3EE /* PBXContainerItemProxy */;
+		};
+		07C7BB3A1B7DE7EA001EE3EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07C7BB361B7DE7EA001EE3EE /* Lerkendal-ObjC WatchKit App */;
+			targetProxy = 07C7BB391B7DE7EA001EE3EE /* PBXContainerItemProxy */;
+		};
+		07C7BB491B7DE7EA001EE3EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07C7BB451B7DE7EA001EE3EE /* Lerkendal-ObjC WatchKit Extension */;
+			targetProxy = 07C7BB481B7DE7EA001EE3EE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		07C7BB161B7DE7EA001EE3EE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07C7BB171B7DE7EA001EE3EE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		07C7BB1B1B7DE7EA001EE3EE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07C7BB1C1B7DE7EA001EE3EE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		07C7BB3C1B7DE7EA001EE3EE /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07C7BB3D1B7DE7EA001EE3EE /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		07C7BB571B7DE7EA001EE3EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		07C7BB581B7DE7EA001EE3EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		07C7BB5A1B7DE7EA001EE3EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				INFOPLIST_FILE = "Lerkendal-ObjC WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "hakloev.Lerkendal-ObjC.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		07C7BB5B1B7DE7EA001EE3EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				INFOPLIST_FILE = "Lerkendal-ObjC WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "hakloev.Lerkendal-ObjC.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		07C7BB5E1B7DE7EA001EE3EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = Lerkendal_ObjC_WatchKit_Extension;
+				INFOPLIST_FILE = "Lerkendal-ObjC WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "hakloev.Lerkendal-ObjC.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		07C7BB5F1B7DE7EA001EE3EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = Lerkendal_ObjC_WatchKit_Extension;
+				INFOPLIST_FILE = "Lerkendal-ObjC WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "hakloev.Lerkendal-ObjC.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		07C7BB621B7DE7EA001EE3EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Lerkendal-ObjC/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "hakloev.Lerkendal-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		07C7BB631B7DE7EA001EE3EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Lerkendal-ObjC/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "hakloev.Lerkendal-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		07C7BB651B7DE7EA001EE3EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Lerkendal-ObjCTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "hakloev.Lerkendal-ObjCTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lerkendal-ObjC.app/Lerkendal-ObjC";
+			};
+			name = Debug;
+		};
+		07C7BB661B7DE7EA001EE3EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Lerkendal-ObjCTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "hakloev.Lerkendal-ObjCTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lerkendal-ObjC.app/Lerkendal-ObjC";
+			};
+			name = Release;
+		};
+		07C7BB681B7DE7EA001EE3EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Lerkendal-ObjCUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "hakloev.Lerkendal-ObjCUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Lerkendal-ObjC";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		07C7BB691B7DE7EA001EE3EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Lerkendal-ObjCUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "hakloev.Lerkendal-ObjCUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Lerkendal-ObjC";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		07C7BB051B7DE7E9001EE3EE /* Build configuration list for PBXProject "Lerkendal-ObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07C7BB571B7DE7EA001EE3EE /* Debug */,
+				07C7BB581B7DE7EA001EE3EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07C7BB591B7DE7EA001EE3EE /* Build configuration list for PBXNativeTarget "Lerkendal-ObjC WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07C7BB5A1B7DE7EA001EE3EE /* Debug */,
+				07C7BB5B1B7DE7EA001EE3EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07C7BB5D1B7DE7EA001EE3EE /* Build configuration list for PBXNativeTarget "Lerkendal-ObjC WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07C7BB5E1B7DE7EA001EE3EE /* Debug */,
+				07C7BB5F1B7DE7EA001EE3EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07C7BB611B7DE7EA001EE3EE /* Build configuration list for PBXNativeTarget "Lerkendal-ObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07C7BB621B7DE7EA001EE3EE /* Debug */,
+				07C7BB631B7DE7EA001EE3EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07C7BB641B7DE7EA001EE3EE /* Build configuration list for PBXNativeTarget "Lerkendal-ObjCTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07C7BB651B7DE7EA001EE3EE /* Debug */,
+				07C7BB661B7DE7EA001EE3EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07C7BB671B7DE7EA001EE3EE /* Build configuration list for PBXNativeTarget "Lerkendal-ObjCUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07C7BB681B7DE7EA001EE3EE /* Debug */,
+				07C7BB691B7DE7EA001EE3EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 07C7BB021B7DE7E9001EE3EE /* Project object */;
+}

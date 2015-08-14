@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Complication - Lerkendal-ObjC WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>Lerkendal-ObjC WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Lerkendal-ObjC.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>07C7BB091B7DE7EA001EE3EE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>07C7BB221B7DE7EA001EE3EE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>07C7BB2D1B7DE7EA001EE3EE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>07C7BB361B7DE7EA001EE3EE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
