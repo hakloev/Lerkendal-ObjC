@@ -50,7 +50,7 @@
 
 - (void)refreshWasherData {
     // Should create service for this. Does exactly the same in InterfaceController
-    NSURL *apiURL = [NSURL URLWithString:@"http://sit.hakloev.no/api/v1/available"];
+    NSURL *apiURL = [NSURL URLWithString:@"https://hakloev.no/sit/api/v1/available"];
     
     NSURLSession *session = [NSURLSession sessionWithConfiguration: [NSURLSessionConfiguration ephemeralSessionConfiguration]];
     [[session dataTaskWithURL:apiURL completionHandler:^(NSData *data,
