@@ -4,6 +4,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8089"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="ArialHB.ttc">
+            <string>ArialHebrew-Bold</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="Dul-Rr-T2s">
@@ -45,10 +50,92 @@
                         <outlet property="availableDryers" destination="Fej-Kb-ge9" id="WNc-88-gMX"/>
                         <outlet property="availableLargeWashers" destination="lQx-ic-R8q" id="ih0-gr-uN1"/>
                         <outlet property="availableWashers" destination="BGJ-14-Yic" id="0zI-c8-cSS"/>
+                        <segue destination="iGv-Od-uql" kind="relationship" relationship="nextPage" id="7k3-Eo-18C"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="179" y="368"/>
+            <point key="canvasLocation" x="113" y="370"/>
+        </scene>
+        <!--Bus Interface Controller-->
+        <scene sceneID="V4O-kV-Ptf">
+            <objects>
+                <controller hidesWhenLoading="NO" id="iGv-Od-uql" customClass="BusInterfaceController">
+                    <items>
+                        <label alignment="left" text="Til byen:" id="eAP-Zx-sFr">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <table alignment="left" id="FPr-xd-6ff">
+                            <items>
+                                <tableRow identifier="busRow" selectable="NO" id="lBH-pu-MTW" userLabel="busRow" customClass="BusRowController">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="u6A-yn-frQ">
+                                        <items>
+                                            <group width="1" alignment="left" id="fg5-fy-pDV">
+                                                <items>
+                                                    <group height="45" alignment="left" id="SZD-xb-PiJ">
+                                                        <items>
+                                                            <label width="37" height="100" alignment="left" text="435:" textAlignment="center" id="jr9-EC-bvv">
+                                                                <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                                            </label>
+                                                        </items>
+                                                    </group>
+                                                    <group width="100" alignment="left" layout="vertical" id="NBI-Ga-tL5">
+                                                        <items>
+                                                            <group width="72.5" alignment="left" id="L5x-zn-dn1">
+                                                                <items>
+                                                                    <label alignment="left" text="19:28" textAlignment="center" id="duY-f2-i1V"/>
+                                                                    <label alignment="left" text="-" id="u78-nB-mPU"/>
+                                                                    <label alignment="left" text="S" textAlignment="right" id="5ZM-9C-BCY"/>
+                                                                </items>
+                                                            </group>
+                                                            <separator alignment="left" id="1eY-ke-THK"/>
+                                                            <label alignment="left" text="Kongens Gate K2" textAlignment="center" id="bEh-Zj-rZQ">
+                                                                <fontDescription key="font" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="10"/>
+                                                            </label>
+                                                        </items>
+                                                        <variation key="device=watch38mm" width="90"/>
+                                                        <variation key="device=watch42mm" width="100"/>
+                                                    </group>
+                                                </items>
+                                                <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                            </group>
+                                        </items>
+                                        <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="destinationLabel" destination="bEh-Zj-rZQ" id="uYs-Nk-MiE"/>
+                                        <outlet property="realtimeLabel" destination="5ZM-9C-BCY" id="r7w-xQ-ZxI"/>
+                                        <outlet property="routeLabel" destination="jr9-EC-bvv" id="2Ro-hS-lqb"/>
+                                        <outlet property="timeLabel" destination="duY-f2-i1V" id="xjC-eH-YPT"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <label alignment="left" text="Fra byen:" id="8By-eM-hQt">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <table alignment="left" id="HbK-Oz-LHI">
+                            <items>
+                                <tableRow id="8ef-ZB-XGe">
+                                    <group key="rootItem" width="1" alignment="left" id="CSP-K6-Jma"/>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <menu key="menu" id="bgc-aZ-yVN">
+                        <items>
+                            <menuItem title="Refresh" icon="repeat" id="hdZ-sT-4of">
+                                <connections>
+                                    <action selector="refreshButton" destination="iGv-Od-uql" id="Naq-wh-NUB"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="busTable" destination="FPr-xd-6ff" id="8bA-sY-Lhj"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="371" y="332"/>
         </scene>
     </scenes>
 </document>
