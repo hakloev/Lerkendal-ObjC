@@ -10,6 +10,8 @@
 
 @interface BusInterfaceController ()
 
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *loadingLabel;
+
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceTable *busTableToCity;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceTable *busTableFromCity;
 
@@ -25,6 +27,8 @@
 }
 
 - (void)willActivate {
+    [self fetchBusData];
+    
     // This method is called when watch view controller is about to be visible to user
     [super willActivate];
 }
@@ -38,10 +42,20 @@
     [self fetchBusData];
 }
 
+- (void)setRefreshingLabelWithBOOL:(BOOL)status
+{
+    [[self loadingLabel] setHidden:status];
+    [[self busTableToCity] setHidden:!status];
+    [[self busTableFromCity] setHidden:!status];
+}
+
+
 - (void)fetchBusData
 {
     NSURL *apiURLToCity = [NSURL URLWithString:@"http://bybussen.api.tmn.io/rt/16011264"];
     NSURL *apiURLFromCity = [NSURL URLWithString:@"http://bybussen.api.tmn.io/rt/16010264"];
+    
+    [self setRefreshingLabelWithBOOL:NO];
     
     [self downloadBusDataFromURL:apiURLToCity withCompletionHandler:^(NSArray *busDataToCity){
         if (busDataToCity != nil) {
@@ -98,8 +112,11 @@
         [row.destinationLabel setText:[busInformation objectForKey:@"d"]];
     }
     NSLog(@"Populated bus table");
-   
+    [table setHidden:NO]; // Reactivates after setRefreshingLabel
+    [[self loadingLabel] setHidden:YES]; // Activates after first download. Should activate after last.
 }
+
+
 @end
 
 

@@ -10,6 +10,8 @@
 
 @interface InterfaceController()
 
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *loadingLabel;
+
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceTable *washersTable;
 
 @end
@@ -39,7 +41,15 @@
     [self refreshWasherData];
 }
 
+- (void)setRefreshingLabelWithBOOL:(BOOL)status
+{
+    [[self washersTable] setHidden:status];
+    [[self loadingLabel] setHidden:!status];
+}
+
 - (void)refreshWasherData {
+    [self setRefreshingLabelWithBOOL:YES];
+    
     WasherData *sharedInstance = [WasherData sharedInstance];
     [sharedInstance getCurrentMachineStatusesWithCallback:^(NSDictionary *washers) {
         if (washers != nil) {
@@ -62,6 +72,8 @@
                 index++;
             }
             NSLog(@"Populated washer table");
+            
+            [self setRefreshingLabelWithBOOL:NO];
         }
         
         [self refreshComplications];

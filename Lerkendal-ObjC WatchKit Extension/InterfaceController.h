@@ -18,5 +18,6 @@
 
 - (void)refreshWasherData;
 - (void)refreshComplications;
+- (void)setRefreshingLabelWithBOOL:(BOOL)status;
 
 @end

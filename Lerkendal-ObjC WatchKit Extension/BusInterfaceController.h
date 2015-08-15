@@ -16,5 +16,6 @@
 - (void)fetchBusData;
 - (void)downloadBusDataFromURL: (NSURL*)url withCompletionHandler: (void (^)(NSArray*))handler;
 - (void)populateTable: (WKInterfaceTable*)table withBusData: (NSArray*)busData;
+- (void)setRefreshingLabelWithBOOL:(BOOL)status;
 
 @end

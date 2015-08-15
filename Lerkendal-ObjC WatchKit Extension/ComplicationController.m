@@ -113,7 +113,7 @@
 
 - (void)getNextRequestedUpdateDateWithHandler:(void(^)(NSDate * __nullable updateDate))handler {
     // Call the handler with the date when you would next like to be given the opportunity to update your complication content
-    handler([NSDate dateWithTimeIntervalSinceNow:60*30]); // Update every half hour
+    handler([NSDate dateWithTimeIntervalSinceNow:60*15]); // Update every fifteen minutes
 }
 
 #pragma mark - Placeholder Templates
@@ -145,6 +145,7 @@
             CLKComplicationTemplateUtilitarianLargeFlat *modularTemplate = [[CLKComplicationTemplateUtilitarianLargeFlat alloc] init];
             modularTemplate.textProvider = [CLKSimpleTextProvider textProviderWithText:@"STATUS: N/A" shortText:@"VM: N/A"];
             template = modularTemplate;
+            
         }
         case CLKComplicationFamilyCircularSmall: {
             // Not supported
