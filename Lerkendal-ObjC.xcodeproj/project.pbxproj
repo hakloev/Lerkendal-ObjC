@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		078F40681B7F3E590096112B /* BusRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 078F40671B7F3E590096112B /* BusRowController.m */; };
 		078F406B1B7F3F510096112B /* BusInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 078F406A1B7F3F510096112B /* BusInterfaceController.m */; };
+		078F40711B7F604C0096112B /* WasherRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 078F40701B7F604C0096112B /* WasherRowController.m */; };
 		07C7BB0F1B7DE7EA001EE3EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C7BB0E1B7DE7EA001EE3EE /* main.m */; };
 		07C7BB121B7DE7EA001EE3EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C7BB111B7DE7EA001EE3EE /* AppDelegate.m */; };
 		07C7BB151B7DE7EA001EE3EE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C7BB141B7DE7EA001EE3EE /* ViewController.m */; };
@@ -89,6 +90,8 @@
 		078F40671B7F3E590096112B /* BusRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusRowController.m; sourceTree = "<group>"; };
 		078F40691B7F3F510096112B /* BusInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusInterfaceController.h; sourceTree = "<group>"; };
 		078F406A1B7F3F510096112B /* BusInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusInterfaceController.m; sourceTree = "<group>"; };
+		078F406F1B7F604C0096112B /* WasherRowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WasherRowController.h; sourceTree = "<group>"; };
+		078F40701B7F604C0096112B /* WasherRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WasherRowController.m; sourceTree = "<group>"; };
 		07C7BB0A1B7DE7EA001EE3EE /* Lerkendal-ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lerkendal-ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07C7BB0E1B7DE7EA001EE3EE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		07C7BB101B7DE7EA001EE3EE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -246,6 +249,8 @@
 				078F40671B7F3E590096112B /* BusRowController.m */,
 				078F40691B7F3F510096112B /* BusInterfaceController.h */,
 				078F406A1B7F3F510096112B /* BusInterfaceController.m */,
+				078F406F1B7F604C0096112B /* WasherRowController.h */,
+				078F40701B7F604C0096112B /* WasherRowController.m */,
 			);
 			path = "Lerkendal-ObjC WatchKit Extension";
 			sourceTree = "<group>";
@@ -486,6 +491,7 @@
 				078F406B1B7F3F510096112B /* BusInterfaceController.m in Sources */,
 				07C7BB531B7DE7EA001EE3EE /* ComplicationController.m in Sources */,
 				07C7BB501B7DE7EA001EE3EE /* ExtensionDelegate.m in Sources */,
+				078F40711B7F604C0096112B /* WasherRowController.m in Sources */,
 				07C7BB4D1B7DE7EA001EE3EE /* InterfaceController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

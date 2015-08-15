@@ -7,6 +7,7 @@
     <customFonts key="customFonts">
         <mutableArray key="ArialHB.ttc">
             <string>ArialHebrew-Bold</string>
+            <string>ArialHebrew-Bold</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -16,26 +17,29 @@
                 <controller id="tvU-L1-ZTT" customClass="InterfaceController">
                     <items>
                         <label alignment="left" text="Status:" id="IHz-xV-eDZ">
+                            <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                         </label>
-                        <label alignment="left" text="Vaskemaskiner:" id="Fkd-qZ-GnW">
-                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
-                        </label>
-                        <label width="136" alignment="left" text="..." id="BGJ-14-Yic">
-                            <fontDescription key="font" type="italicSystem" pointSize="16"/>
-                        </label>
-                        <label alignment="left" text="Tørketrommler:" id="QNy-ze-Bmn">
-                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
-                        </label>
-                        <label alignment="left" text="..." id="Fej-Kb-ge9">
-                            <fontDescription key="font" type="italicSystem" pointSize="16"/>
-                        </label>
-                        <label alignment="left" text="Stor vaskemaskin:" id="v0G-fn-HAt">
-                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
-                        </label>
-                        <label alignment="left" text="..." id="lQx-ic-R8q">
-                            <fontDescription key="font" type="italicSystem" pointSize="16"/>
-                        </label>
+                        <table alignment="left" id="WbO-vm-G8w">
+                            <items>
+                                <tableRow identifier="washerRow" selectable="NO" id="G7b-U1-kNC" customClass="WasherRowController">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="3A7-Z1-7gA">
+                                        <items>
+                                            <label alignment="left" text="Type maskin" id="QHA-mr-LvS">
+                                                <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                            </label>
+                                            <label alignment="left" text="15" id="ENR-WZ-kpE">
+                                                <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="availableMachinesLabel" destination="ENR-WZ-kpE" id="VLb-9I-hUn"/>
+                                        <outlet property="machineTypeLabel" destination="QHA-mr-LvS" id="9QU-se-MW7"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
                     </items>
                     <menu key="menu" id="Axy-ae-adk">
                         <items>
@@ -47,9 +51,7 @@
                         </items>
                     </menu>
                     <connections>
-                        <outlet property="availableDryers" destination="Fej-Kb-ge9" id="WNc-88-gMX"/>
-                        <outlet property="availableLargeWashers" destination="lQx-ic-R8q" id="ih0-gr-uN1"/>
-                        <outlet property="availableWashers" destination="BGJ-14-Yic" id="0zI-c8-cSS"/>
+                        <outlet property="washersTable" destination="WbO-vm-G8w" id="8hE-XT-oey"/>
                         <segue destination="iGv-Od-uql" kind="relationship" relationship="nextPage" id="7k3-Eo-18C"/>
                     </connections>
                 </controller>
@@ -62,6 +64,7 @@
                 <controller hidesWhenLoading="NO" id="iGv-Od-uql" customClass="BusInterfaceController">
                     <items>
                         <label alignment="left" text="Til byen:" id="eAP-Zx-sFr">
+                            <color key="textColor" red="1" green="0.53866674290000005" blue="0.00070719699560000001" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                         </label>
                         <table alignment="left" id="FPr-xd-6ff">
@@ -111,12 +114,52 @@
                             </items>
                         </table>
                         <label alignment="left" text="Fra byen:" id="8By-eM-hQt">
+                            <color key="textColor" red="1" green="0.53866674290000005" blue="0.00070719699560000001" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                         </label>
                         <table alignment="left" id="HbK-Oz-LHI">
                             <items>
-                                <tableRow id="8ef-ZB-XGe">
-                                    <group key="rootItem" width="1" alignment="left" id="CSP-K6-Jma"/>
+                                <tableRow identifier="busRow" selectable="NO" id="Noy-GL-eZO" userLabel="busRow" customClass="BusRowController">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="jBj-sm-d44">
+                                        <items>
+                                            <group width="1" alignment="left" id="tFv-N4-9Nd">
+                                                <items>
+                                                    <group height="45" alignment="left" id="Z8W-Ej-Hhu">
+                                                        <items>
+                                                            <label width="37" height="100" alignment="left" text="435:" textAlignment="center" id="0NT-Ut-f9K">
+                                                                <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                                            </label>
+                                                        </items>
+                                                    </group>
+                                                    <group width="100" alignment="left" layout="vertical" id="gRp-FX-YI9">
+                                                        <items>
+                                                            <group width="72.5" alignment="left" id="LnN-Rp-rvY">
+                                                                <items>
+                                                                    <label alignment="left" text="19:28" textAlignment="center" id="lCW-AE-dHI"/>
+                                                                    <label alignment="left" text="-" id="uWI-Vm-Dfp"/>
+                                                                    <label alignment="left" text="S" textAlignment="right" id="DKz-0d-hTH"/>
+                                                                </items>
+                                                            </group>
+                                                            <separator alignment="left" id="TOS-hS-XeL"/>
+                                                            <label alignment="left" text="Kongens Gate K2" textAlignment="center" id="oZp-Xg-Yfm">
+                                                                <fontDescription key="font" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="10"/>
+                                                            </label>
+                                                        </items>
+                                                        <variation key="device=watch38mm" width="90"/>
+                                                        <variation key="device=watch42mm" width="100"/>
+                                                    </group>
+                                                </items>
+                                                <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                            </group>
+                                        </items>
+                                        <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="destinationLabel" destination="oZp-Xg-Yfm" id="xOw-SE-rBl"/>
+                                        <outlet property="realtimeLabel" destination="DKz-0d-hTH" id="E6f-nD-Shw"/>
+                                        <outlet property="routeLabel" destination="0NT-Ut-f9K" id="fnI-nh-UY5"/>
+                                        <outlet property="timeLabel" destination="lCW-AE-dHI" id="uHm-95-4IY"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>
@@ -131,7 +174,8 @@
                         </items>
                     </menu>
                     <connections>
-                        <outlet property="busTable" destination="FPr-xd-6ff" id="8bA-sY-Lhj"/>
+                        <outlet property="busTableFromCity" destination="HbK-Oz-LHI" id="Xfw-Js-eVA"/>
+                        <outlet property="busTableToCity" destination="FPr-xd-6ff" id="geH-QB-1td"/>
                     </connections>
                 </controller>
             </objects>

@@ -10,7 +10,8 @@
 
 @interface BusInterfaceController ()
 
-@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceTable *busTable;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceTable *busTableToCity;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceTable *busTableFromCity;
 
 @end
 
@@ -20,10 +21,12 @@
     [super awakeWithContext:context];
     
     // Configure interface objects here.
-    [self loadBusData];
+    [self fetchBusData];
 }
 
 - (void)willActivate {
+    [self fetchBusData];
+    
     // This method is called when watch view controller is about to be visible to user
     [super willActivate];
 }
@@ -34,62 +37,71 @@
 }
 
 - (IBAction)refreshButton {
-    [self loadBusData];
+    [self fetchBusData];
 }
 
-
-- (void)loadBusData
+- (void)fetchBusData
 {
-    [self fetchBusDataWithCompletionHandler:^(NSArray *busData){
-        if (busData == nil) {
-            NSLog(@"No bus data from fetchBusData");
-            return;
+    NSURL *apiURLToCity = [NSURL URLWithString:@"http://bybussen.api.tmn.io/rt/16011264"];
+    NSURL *apiURLFromCity = [NSURL URLWithString:@"http://bybussen.api.tmn.io/rt/16010264"];
+    
+    [self downloadBusDataFromURL:apiURLToCity withCompletionHandler:^(NSArray *busDataToCity){
+        if (busDataToCity != nil) {
+            // Populate table
+            [self populateTable:self.busTableToCity withBusData:busDataToCity];
         }
-        [self.busTable setNumberOfRows:5 withRowType:@"busRow"];
-        
-        for (NSInteger i = 0; i < self.busTable.numberOfRows; i++) {
-            NSDictionary *busInformation = busData[i];
-            BusRowController *row = [self.busTable rowControllerAtIndex:i];
-            
-            [row.routeLabel setText:[busInformation objectForKey:@"l"]];
-            
-            NSString *busTime = [[[busInformation objectForKey:@"t"] componentsSeparatedByString:@" "] objectAtIndex:1];
-            [row.timeLabel setText:busTime];
-            
-            ([busInformation objectForKey:@"rt"] == 0) ? [row.realtimeLabel setText:@""] : [row.realtimeLabel setText:@"S"];
-            
-            [row.destinationLabel setText:[busInformation objectForKey:@"d"]];
+    }];
+    
+    [self downloadBusDataFromURL:apiURLFromCity withCompletionHandler:^(NSArray *busDataFromCity) {
+        if (busDataFromCity != nil) {
+            [self populateTable:self.busTableFromCity withBusData:busDataFromCity];
         }
-        NSLog(@"Populated busTable");
+        // Else: Clean table or something like that
     }];
 }
 
-- (void)fetchBusDataWithCompletionHandler:(void (^)(NSArray *))handler
+- (void)downloadBusDataFromURL:(NSURL *)url withCompletionHandler:(void (^)(NSArray *))handler
 {
-    NSURL *apiURL = [NSURL URLWithString:@"http://bybussen.api.tmn.io/rt/16011264"];
-    
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration ephemeralSessionConfiguration]];
     
-    [[session dataTaskWithURL:apiURL completionHandler:^(NSData *data,
+    [[session dataTaskWithURL:url completionHandler:^(NSData *data,
                                                          NSURLResponse *response,
                                                          NSError *error) {
         NSError *jsonError = nil;
         NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&jsonError];
         
         if (!jsonDictionary) {
-            NSLog(@"Error parsing JSON in fetchBusData");
+            NSLog(@"Error parsing JSON in downloadBusData");
             handler(nil);
             
         } else {
-            NSLog(@"Success on getting JSON in fetchBusData");
+            NSLog(@"Success on getting JSON in downloadBusData");
             handler([jsonDictionary objectForKey:@"next"]);
         }
+        
     }] resume];
-
-    
 }
 
-
+- (void)populateTable:(WKInterfaceTable *)table withBusData:(NSArray *)busData
+{
+    [table setNumberOfRows:5 withRowType:@"busRow"];
+    
+    for (NSInteger i = 0; i < table.numberOfRows; i++) {
+        NSDictionary *busInformation = busData[i];
+        BusRowController *row = [table rowControllerAtIndex:i];
+        
+        [row.routeLabel setText:[busInformation objectForKey:@"l"]];
+        
+        NSString *busTime = [[[busInformation objectForKey:@"t"] componentsSeparatedByString:@" "] objectAtIndex:1];
+        [row.timeLabel setText:busTime];
+        
+        ([busInformation objectForKey:@"rt"] == 0) ? [row.realtimeLabel setText:@""] : [row.realtimeLabel setText:@"S"];
+        
+        [row.destinationLabel setText:[busInformation objectForKey:@"d"]];
+    }
+    NSLog(@"Populated bus table");
+   
+}
 @end
 
 

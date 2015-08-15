@@ -10,9 +10,7 @@
 
 @interface InterfaceController()
 
-@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *availableWashers;
-@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *availableDryers;
-@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *availableLargeWashers;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceTable *washersTable;
 
 @end
 
@@ -38,37 +36,39 @@
 
 - (IBAction)refreshButton {
     NSLog(@"Requested refresh");
-    [self setLoadingToOutlets];
     [self refreshWasherData];
-}
-
-- (void)setLoadingToOutlets {
-    [[self availableWashers] setText:@"..."];
-    [[self availableDryers] setText:@"..."];
-    [[self availableLargeWashers] setText:@"..."];
 }
 
 - (void)refreshWasherData {
     WasherData *sharedInstance = [WasherData sharedInstance];
     [sharedInstance getCurrentMachineStatusesWithCallback:^(NSDictionary *washers) {
-        if (washers == nil) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [[self availableWashers] setText:@"N/A"];
-                [[self availableDryers] setText:@"N/A"];
-                [[self availableLargeWashers] setText:@"N/A"];
-            });
-        } else {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [[self availableWashers] setText:[NSString stringWithFormat:@"%@", washers[@"availableWashers"]]];
-                [[self availableDryers] setText:[NSString stringWithFormat:@"%@", washers[@"availableDryer"]]];
-                [[self availableLargeWashers] setText:[NSString stringWithFormat:@"%@", washers[@"availableLargeWasher"]]];
-            });
+        if (washers != nil) {
+            [self.washersTable setNumberOfRows:washers.count withRowType:@"washerRow"];
             
-            CLKComplicationServer *server = [CLKComplicationServer sharedInstance];
-            for (CLKComplication *complication in [server activeComplications]) {
-                [server reloadTimelineForComplication:complication];
+            NSInteger index = 0;
+            for (NSString *key in washers) {
+                WasherRowController *row = [[self washersTable] rowControllerAtIndex:index];
+                NSString *machineType = nil;
+                if ([key  isEqual: @"availableWashers"]) {
+                    machineType = @"Vaskemaskiner";
+                } else if ([key isEqual: @"availableLargeWasher"]) {
+                    machineType = @"Stor vaskemaskin";
+                } else {
+                    machineType = @"Tørketrommel";
+                }
+                
+                [row.machineTypeLabel setText:machineType];
+                [row.availableMachinesLabel setText:[NSString stringWithFormat:@"%@", [washers objectForKey:key]]];
+                index++;
             }
+            NSLog(@"Populated washer table");
         }
+        
+        CLKComplicationServer *server = [CLKComplicationServer sharedInstance];
+        for (CLKComplication *complication in [server activeComplications]) {
+            [server reloadTimelineForComplication:complication];
+        }
+        
     }];
 }
 

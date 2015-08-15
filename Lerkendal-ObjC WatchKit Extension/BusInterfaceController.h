@@ -13,7 +13,8 @@
 
 @interface BusInterfaceController : WKInterfaceController
 
-- (void)loadBusData;
-- (void)fetchBusDataWithCompletionHandler:(void (^)(NSArray *))handler;
+- (void)fetchBusData;
+- (void)downloadBusDataFromURL: (NSURL*)url withCompletionHandler: (void (^)(NSArray*))handler;
+- (void)populateTable: (WKInterfaceTable*)table withBusData: (NSArray*)busData;
 
 @end
