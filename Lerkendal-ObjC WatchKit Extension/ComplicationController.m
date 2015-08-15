@@ -56,9 +56,18 @@
                 break;
             }
             case CLKComplicationFamilyModularLarge: {
+                // Not supported
                 break;
             }
             case CLKComplicationFamilyUtilitarianSmall: {
+                CLKComplicationTemplateUtilitarianSmallFlat *complication = [[CLKComplicationTemplateUtilitarianSmallFlat alloc] init];
+                if (washers == nil) {
+                    complication.textProvider = [CLKSimpleTextProvider textProviderWithText:@"VM: N/A"];
+                } else {
+                    NSLog(@"UtiliarianSmall called");
+                    complication.textProvider = [CLKSimpleTextProvider textProviderWithText:[NSString stringWithFormat:@"VM: %@", washers[@"availableWashers"]]];
+                }
+                template = complication;
                 break;
             }
             case CLKComplicationFamilyUtilitarianLarge: {
@@ -74,6 +83,7 @@
                 break;
             }
             case CLKComplicationFamilyCircularSmall: {
+                // Not supported
                 break;
             }
         }
@@ -109,8 +119,7 @@
 #pragma mark - Placeholder Templates
 
 - (void)getPlaceholderTemplateForComplication:(CLKComplication *)complication withHandler:(void(^)(CLKComplicationTemplate * __nullable complicationTemplate))handler {
-    // This method will be called once per supported complication, and the results will be cached
-    
+
     CLKComplicationTemplate *template = nil;
     
     switch (complication.family) {
@@ -122,11 +131,14 @@
             break;
         }
         case CLKComplicationFamilyModularLarge: {
+            // Not supported
             template = nil;
             break;
         }
         case CLKComplicationFamilyUtilitarianSmall: {
-            template = nil;
+            CLKComplicationTemplateUtilitarianSmallFlat *modularTempalte = [[CLKComplicationTemplateUtilitarianSmallFlat alloc] init];
+            modularTempalte.textProvider = [CLKSimpleTextProvider textProviderWithText:@"STATUS: N/A" shortText:@"VM: N/A"];
+            template = modularTempalte;
             break;
         }
         case CLKComplicationFamilyUtilitarianLarge: {
@@ -135,6 +147,7 @@
             template = modularTemplate;
         }
         case CLKComplicationFamilyCircularSmall: {
+            // Not supported
             template = nil;
             break;
         }

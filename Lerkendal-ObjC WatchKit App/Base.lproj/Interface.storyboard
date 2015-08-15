@@ -16,8 +16,8 @@
             <objects>
                 <controller id="tvU-L1-ZTT" customClass="InterfaceController">
                     <items>
-                        <label alignment="left" text="Status:" id="IHz-xV-eDZ">
-                            <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <label alignment="left" text="Vaskeristatus:" id="IHz-xV-eDZ">
+                            <color key="textColor" red="0.015686274509803921" green="0.87058823529411766" blue="0.20784313725490194" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                         </label>
                         <table alignment="left" id="WbO-vm-G8w">
@@ -56,7 +56,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="113" y="370"/>
+            <point key="canvasLocation" x="67" y="332"/>
         </scene>
         <!--Bus Interface Controller-->
         <scene sceneID="V4O-kV-Ptf">
@@ -64,7 +64,7 @@
                 <controller hidesWhenLoading="NO" id="iGv-Od-uql" customClass="BusInterfaceController">
                     <items>
                         <label alignment="left" text="Til byen:" id="eAP-Zx-sFr">
-                            <color key="textColor" red="1" green="0.53866674290000005" blue="0.00070719699560000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="0.015686274510000001" green="0.87058823529999996" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                         </label>
                         <table alignment="left" id="FPr-xd-6ff">
@@ -114,7 +114,7 @@
                             </items>
                         </table>
                         <label alignment="left" text="Fra byen:" id="8By-eM-hQt">
-                            <color key="textColor" red="1" green="0.53866674290000005" blue="0.00070719699560000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="0.015686274510000001" green="0.87058823529999996" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                         </label>
                         <table alignment="left" id="HbK-Oz-LHI">

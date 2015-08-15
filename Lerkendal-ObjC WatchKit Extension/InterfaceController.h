@@ -16,4 +16,7 @@
 
 @interface InterfaceController : WKInterfaceController
 
+- (void)refreshWasherData;
+- (void)refreshComplications;
+
 @end
