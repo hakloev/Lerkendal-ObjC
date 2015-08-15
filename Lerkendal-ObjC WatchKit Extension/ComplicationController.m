@@ -16,36 +16,6 @@
 
 @implementation ComplicationController
 
-// Defining callback block to use with getCurrentTimeLine
-typedef void (^CompletionBlock)(NSDictionary*);
-
-- (void)getCurrentMachineStatusWithCallback:(CompletionBlock)callback {
-    // Should create service for this. Does exactly the same in InterfaceController
-    NSURL *apiURL = [NSURL URLWithString:@"https://hakloev.no/sit/api/v1/available"];
-    
-    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration ephemeralSessionConfiguration]];
-    
-    [[session dataTaskWithURL:apiURL completionHandler:^(NSData *data,
-                                                         NSURLResponse *response,
-                                                         NSError *error) {
-        NSError *jsonError = nil;
-        NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&jsonError];
-        
-        if (!jsonDictionary) {
-            NSLog(@"Error parsing JSON in ComplicationController");
-            dispatch_async(dispatch_get_main_queue(), ^{
-                callback(nil);
-            });
-        } else {
-            NSLog(@"Success on getting JSON in getCurrentMachineStatus");
-            dispatch_async(dispatch_get_main_queue(), ^{
-                callback(jsonDictionary);
-            });
-        }
-    }] resume];
-    
-}
-
 #pragma mark - Timeline Configuration
 
 - (void)getSupportedTimeTravelDirectionsForComplication:(CLKComplication *)complication withHandler:(void(^)(CLKComplicationTimeTravelDirections directions))handler {
@@ -67,8 +37,10 @@ typedef void (^CompletionBlock)(NSDictionary*);
 #pragma mark - Timeline Population
 
 - (void)getCurrentTimelineEntryForComplication:(CLKComplication *)complication withHandler:(void(^)(CLKComplicationTimelineEntry * __nullable))handler {
-    // Call the handler with the current timeline entry    
-    [self getCurrentMachineStatusWithCallback:^(NSDictionary* washers){
+    // Call the handler with the current timeline entry
+    
+    WasherData *sharedInstance = [WasherData sharedInstance];
+    [sharedInstance getCurrentMachineStatusesWithCallback:^(NSDictionary *washers){
         CLKComplicationTemplate *template = nil;
         switch (complication.family) {
             case CLKComplicationFamilyModularSmall: {
@@ -113,6 +85,7 @@ typedef void (^CompletionBlock)(NSDictionary*);
             handler(nil);
         }
     }];
+   
     
 }
 

@@ -8,6 +8,8 @@
 
 #import <ClockKit/ClockKit.h>
 
+#import "Services/WasherData.h"
+
 @interface ComplicationController : NSObject <CLKComplicationDataSource>
 
 @end

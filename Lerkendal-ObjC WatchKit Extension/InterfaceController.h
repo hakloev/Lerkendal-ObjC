@@ -11,6 +11,8 @@
 
 #import <ClockKit/ClockKit.h>
 
+#import "Services/WasherData.h"
+
 @interface InterfaceController : WKInterfaceController
 
 @end

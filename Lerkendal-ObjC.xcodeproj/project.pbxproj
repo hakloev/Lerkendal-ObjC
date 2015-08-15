@@ -23,6 +23,7 @@
 		07C7BB501B7DE7EA001EE3EE /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C7BB4F1B7DE7EA001EE3EE /* ExtensionDelegate.m */; };
 		07C7BB531B7DE7EA001EE3EE /* ComplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C7BB521B7DE7EA001EE3EE /* ComplicationController.m */; };
 		07C7BB551B7DE7EA001EE3EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C7BB541B7DE7EA001EE3EE /* Assets.xcassets */; };
+		07E327BF1B7F21A5001D4DF5 /* WasherData.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E327BE1B7F21A5001D4DF5 /* WasherData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,8 @@
 		07C7BB521B7DE7EA001EE3EE /* ComplicationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComplicationController.m; sourceTree = "<group>"; };
 		07C7BB541B7DE7EA001EE3EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07C7BB561B7DE7EA001EE3EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07E327BD1B7F21A5001D4DF5 /* WasherData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WasherData.h; path = Services/WasherData.h; sourceTree = "<group>"; };
+		07E327BE1B7F21A5001D4DF5 /* WasherData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WasherData.m; path = Services/WasherData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +227,7 @@
 		07C7BB4A1B7DE7EA001EE3EE /* Lerkendal-ObjC WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				07E327BB1B7F2157001D4DF5 /* Services */,
 				07C7BB4B1B7DE7EA001EE3EE /* InterfaceController.h */,
 				07C7BB4C1B7DE7EA001EE3EE /* InterfaceController.m */,
 				07C7BB4E1B7DE7EA001EE3EE /* ExtensionDelegate.h */,
@@ -234,6 +238,15 @@
 				07C7BB561B7DE7EA001EE3EE /* Info.plist */,
 			);
 			path = "Lerkendal-ObjC WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		07E327BB1B7F2157001D4DF5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				07E327BD1B7F21A5001D4DF5 /* WasherData.h */,
+				07E327BE1B7F21A5001D4DF5 /* WasherData.m */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -458,6 +471,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07E327BF1B7F21A5001D4DF5 /* WasherData.m in Sources */,
 				07C7BB531B7DE7EA001EE3EE /* ComplicationController.m in Sources */,
 				07C7BB501B7DE7EA001EE3EE /* ExtensionDelegate.m in Sources */,
 				07C7BB4D1B7DE7EA001EE3EE /* InterfaceController.m in Sources */,

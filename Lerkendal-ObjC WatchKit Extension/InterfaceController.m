@@ -49,45 +49,27 @@
 }
 
 - (void)refreshWasherData {
-    // Should create service for this. Does exactly the same in InterfaceController
-    NSURL *apiURL = [NSURL URLWithString:@"https://hakloev.no/sit/api/v1/available"];
-    
-    NSURLSession *session = [NSURLSession sessionWithConfiguration: [NSURLSessionConfiguration ephemeralSessionConfiguration]];
-    [[session dataTaskWithURL:apiURL completionHandler:^(NSData *data,
-                                                         NSURLResponse *response,
-                                                         NSError *error) {
-
-        NSError *jsonError = nil;
-        
-        //NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        //NSData *jsonData = [jsonString  dataUsingEncoding:NSUTF8StringEncoding];
-    
-        NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&jsonError];
-        
-        if (!jsonDictionary) {
-            NSLog(@"Error parsing JSON in InterfaceController");
-            NSLog([NSString stringWithFormat:@"%@", [jsonError localizedDescription]]);
+    WasherData *sharedInstance = [WasherData sharedInstance];
+    [sharedInstance getCurrentMachineStatusesWithCallback:^(NSDictionary *washers) {
+        if (washers == nil) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 [[self availableWashers] setText:@"N/A"];
                 [[self availableDryers] setText:@"N/A"];
                 [[self availableLargeWashers] setText:@"N/A"];
             });
         } else {
-            NSLog(@"Success on getting JSON in InterfaceController");
             dispatch_async(dispatch_get_main_queue(), ^{
-                [[self availableWashers] setText:[NSString stringWithFormat:@"%@", jsonDictionary[@"availableWashers"]]];
-                [[self availableDryers] setText:[NSString stringWithFormat:@"%@", jsonDictionary[@"availableDryer"]]];
-                [[self availableLargeWashers] setText:[NSString stringWithFormat:@"%@", jsonDictionary[@"availableLargeWasher"]]];
+                [[self availableWashers] setText:[NSString stringWithFormat:@"%@", washers[@"availableWashers"]]];
+                [[self availableDryers] setText:[NSString stringWithFormat:@"%@", washers[@"availableDryer"]]];
+                [[self availableLargeWashers] setText:[NSString stringWithFormat:@"%@", washers[@"availableLargeWasher"]]];
             });
+            
+            CLKComplicationServer *server = [CLKComplicationServer sharedInstance];
+            for (CLKComplication *complication in [server activeComplications]) {
+                [server reloadTimelineForComplication:complication];
+            }
         }
-    }] resume];
-
-    CLKComplicationServer *server = [CLKComplicationServer sharedInstance];
-    for (CLKComplication *complication in [server activeComplications]) {
-        [server reloadTimelineForComplication:complication];
-    }
-    
-    
+    }];
 }
 
 @end
