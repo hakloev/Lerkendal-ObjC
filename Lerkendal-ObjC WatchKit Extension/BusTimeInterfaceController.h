@@ -1,8 +1,8 @@
 //
-//  BusInterfaceController.h
+//  BusTimeInterfaceController.h
 //  Lerkendal-ObjC
 //
-//  Created by Håkon Løvdal on 15/08/15.
+//  Created by Håkon Løvdal on 23/08/15.
 //  Copyright © 2015 Håkon Løvdal. All rights reserved.
 //
 
@@ -10,8 +10,7 @@
 #import <Foundation/Foundation.h>
 
 #import "BusTimeRowController.h"
-#import "BusStopRowController.h"
 
-@interface BusInterfaceController : WKInterfaceController
+@interface BusTimeInterfaceController : WKInterfaceController
 
 @end

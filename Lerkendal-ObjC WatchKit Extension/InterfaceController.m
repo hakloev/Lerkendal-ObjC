@@ -27,6 +27,8 @@
 }
 
 - (void)willActivate {
+    [self refreshWasherData];
+    
     // This method is called when watch view controller is about to be visible to user
     [super willActivate];
 }
@@ -60,15 +62,15 @@
                 WasherRowController *row = [[self washersTable] rowControllerAtIndex:index];
                 NSString *machineType = nil;
                 if ([key  isEqual: @"availableWashers"]) {
-                    machineType = @"Vaskemaskiner";
+                    machineType = @"Vaskemaskiner:";
                 } else if ([key isEqual: @"availableLargeWasher"]) {
-                    machineType = @"Stor vaskemaskin";
+                    machineType = @"Stor vaskemaskin:";
                 } else {
-                    machineType = @"Tørketrommel";
+                    machineType = @"Tørketrommel:";
                 }
                 
                 [row.machineTypeLabel setText:machineType];
-                [row.availableMachinesLabel setText:[NSString stringWithFormat:@"%@", [washers objectForKey:key]]];
+                [row.availableMachinesLabel setText:[NSString stringWithFormat:@"%@ tilgjengelig", [washers objectForKey:key]]];
                 index++;
             }
             NSLog(@"Populated washer table");

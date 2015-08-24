@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8173.3" systemVersion="15A243d" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tvU-L1-ZTT">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8173.3" systemVersion="15A262e" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tvU-L1-ZTT">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8089"/>
@@ -16,11 +16,11 @@
             <objects>
                 <controller id="tvU-L1-ZTT" customClass="InterfaceController">
                     <items>
-                        <label alignment="left" text="Vaskeristatus:" id="IHz-xV-eDZ">
+                        <label alignment="center" text="Vaskeristatus:" id="IHz-xV-eDZ">
                             <color key="textColor" red="0.015686274509803921" green="0.87058823529411766" blue="0.20784313725490194" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                         </label>
-                        <label alignment="left" text="Laster..." id="bpS-xs-km5"/>
+                        <label alignment="center" verticalAlignment="center" text="Laster..." id="bpS-xs-km5"/>
                         <table alignment="left" id="WbO-vm-G8w">
                             <items>
                                 <tableRow identifier="washerRow" selectable="NO" id="G7b-U1-kNC" customClass="WasherRowController">
@@ -54,29 +54,57 @@
                     <connections>
                         <outlet property="loadingLabel" destination="bpS-xs-km5" id="8xD-yM-Chg"/>
                         <outlet property="washersTable" destination="WbO-vm-G8w" id="8hE-XT-oey"/>
-                        <segue destination="iGv-Od-uql" kind="relationship" relationship="nextPage" id="7k3-Eo-18C"/>
+                        <segue destination="vF3-09-MrT" kind="relationship" relationship="nextPage" id="BFI-T1-9Ec"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="67" y="332"/>
+            <point key="canvasLocation" x="-102" y="191"/>
         </scene>
         <!--Bus Interface Controller-->
-        <scene sceneID="V4O-kV-Ptf">
+        <scene sceneID="mGn-mC-Zlk">
             <objects>
-                <controller hidesWhenLoading="NO" id="iGv-Od-uql" customClass="BusInterfaceController">
+                <controller hidesWhenLoading="NO" id="vF3-09-MrT" customClass="BusInterfaceController">
                     <items>
-                        <label alignment="left" text="Busstider:" id="T2W-28-NC6">
+                        <label alignment="center" text="Busstider:" id="Kex-4o-SiH">
                             <color key="textColor" red="0.015686274510000001" green="0.87058823529999996" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                         </label>
-                        <label alignment="left" text="Laster..." id="tVc-CL-sk2"/>
-                        <label alignment="left" text="Til byen:" id="eAP-Zx-sFr">
+                        <table alignment="left" id="suO-ki-1DP">
+                            <items>
+                                <tableRow identifier="busStopRow" id="GcY-l6-06K" customClass="BusStopRowController">
+                                    <group key="rootItem" width="1" alignment="left" id="W9p-dp-ttn">
+                                        <items>
+                                            <label alignment="left" verticalAlignment="center" text="Lerkendal stadion" textAlignment="left" id="PAZ-u3-HKn">
+                                                <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="busStopName" destination="PAZ-u3-HKn" id="Mbg-k3-pKm"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="busStopTable" destination="suO-ki-1DP" id="HMx-Xr-0TM"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="180" y="191"/>
+        </scene>
+        <!--BusTimeInterfaceController-->
+        <scene sceneID="V4O-kV-Ptf">
+            <objects>
+                <controller identifier="BusTimeInterfaceController" hidesWhenLoading="NO" id="iGv-Od-uql" customClass="BusTimeInterfaceController">
+                    <items>
+                        <label alignment="center" text="Til byen:" id="apm-AE-YIJ">
                             <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                         </label>
                         <table alignment="left" id="FPr-xd-6ff">
                             <items>
-                                <tableRow identifier="busRow" selectable="NO" id="lBH-pu-MTW" userLabel="busRow" customClass="BusRowController">
+                                <tableRow identifier="busTimeRow" selectable="NO" id="lBH-pu-MTW" userLabel="busRow" customClass="BusTimeRowController">
                                     <group key="rootItem" width="1" height="0.0" alignment="left" id="u6A-yn-frQ">
                                         <items>
                                             <group width="1" alignment="left" verticalAlignment="center" id="fg5-fy-pDV">
@@ -113,44 +141,44 @@
                                         <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
                                     </group>
                                     <connections>
-                                        <outlet property="destinationLabel" destination="bEh-Zj-rZQ" id="uYs-Nk-MiE"/>
-                                        <outlet property="realtimeLabel" destination="5ZM-9C-BCY" id="r7w-xQ-ZxI"/>
-                                        <outlet property="routeLabel" destination="jr9-EC-bvv" id="2Ro-hS-lqb"/>
-                                        <outlet property="timeLabel" destination="duY-f2-i1V" id="xjC-eH-YPT"/>
+                                        <outlet property="destinationLabel" destination="bEh-Zj-rZQ" id="xX2-Ia-anw"/>
+                                        <outlet property="realtimeLabel" destination="5ZM-9C-BCY" id="9Sd-jN-asa"/>
+                                        <outlet property="routeLabel" destination="jr9-EC-bvv" id="Hj7-WR-hZr"/>
+                                        <outlet property="timeLabel" destination="duY-f2-i1V" id="lzf-5z-NL4"/>
                                     </connections>
                                 </tableRow>
                             </items>
                         </table>
-                        <label alignment="left" text="Fra byen:" id="8By-eM-hQt">
+                        <label alignment="center" text="Fra byen:" textAlignment="left" id="nGa-Tc-Bgt">
                             <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                         </label>
-                        <table alignment="left" id="HbK-Oz-LHI">
+                        <table alignment="left" id="oeH-8b-d1j">
                             <items>
-                                <tableRow identifier="busRow" selectable="NO" id="LEP-dX-xft" userLabel="busRow" customClass="BusRowController">
-                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="x50-0f-8cK">
+                                <tableRow identifier="busTimeRow" selectable="NO" id="pNv-FF-dQl" userLabel="busRow" customClass="BusTimeRowController">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="FVX-V4-Sfy">
                                         <items>
-                                            <group width="1" alignment="left" verticalAlignment="center" id="JzW-oh-MTA">
+                                            <group width="1" alignment="left" verticalAlignment="center" id="Npw-hx-EdU">
                                                 <items>
-                                                    <group height="45" alignment="left" verticalAlignment="center" id="VXk-XB-3Ft">
+                                                    <group height="45" alignment="left" verticalAlignment="center" id="eEd-08-27u">
                                                         <items>
-                                                            <label width="37" height="100" alignment="left" text="435:" textAlignment="center" id="lVv-vj-AUy">
+                                                            <label width="37" height="100" alignment="left" text="435:" textAlignment="center" id="hay-KK-YrK">
                                                                 <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                                                             </label>
                                                         </items>
                                                     </group>
-                                                    <group width="100" alignment="left" layout="vertical" id="pYE-dr-c99">
+                                                    <group width="100" alignment="left" layout="vertical" id="4U4-Kx-cgI">
                                                         <items>
-                                                            <group width="72.5" alignment="left" id="7My-cp-jch">
+                                                            <group width="72.5" alignment="left" id="Vzd-Gb-zz2">
                                                                 <items>
-                                                                    <label alignment="left" text="19:28" textAlignment="center" id="6pn-bJ-Dwg"/>
-                                                                    <label alignment="left" text="-" id="XPL-jF-JgT"/>
-                                                                    <label alignment="left" text="S" textAlignment="right" id="Zxm-vk-4kd"/>
+                                                                    <label alignment="left" text="19:28" textAlignment="center" id="eOv-hc-3cR"/>
+                                                                    <label alignment="left" text="-" id="c93-1v-AE9"/>
+                                                                    <label alignment="left" text="S" textAlignment="right" id="jUg-M0-BHK"/>
                                                                 </items>
                                                                 <edgeInsets key="margins" left="0.0" right="0.0" top="2" bottom="0.0"/>
                                                             </group>
-                                                            <separator alignment="left" id="jDg-bf-DAC"/>
-                                                            <label alignment="left" verticalAlignment="bottom" text="Kongens Gate K2" textAlignment="center" id="zge-KI-mKK">
+                                                            <separator alignment="left" id="NEx-dU-RmT"/>
+                                                            <label alignment="left" verticalAlignment="bottom" text="Kongens Gate K2" textAlignment="center" id="2Rc-OZ-2wN">
                                                                 <fontDescription key="font" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="10"/>
                                                             </label>
                                                         </items>
@@ -164,32 +192,26 @@
                                         <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
                                     </group>
                                     <connections>
-                                        <outlet property="destinationLabel" destination="zge-KI-mKK" id="cjQ-zc-cIW"/>
-                                        <outlet property="realtimeLabel" destination="Zxm-vk-4kd" id="MtR-3p-cIe"/>
-                                        <outlet property="routeLabel" destination="lVv-vj-AUy" id="N2e-vN-sSz"/>
-                                        <outlet property="timeLabel" destination="6pn-bJ-Dwg" id="8YN-PC-aYQ"/>
+                                        <outlet property="destinationLabel" destination="2Rc-OZ-2wN" id="otH-7u-7LY"/>
+                                        <outlet property="realtimeLabel" destination="jUg-M0-BHK" id="QUD-T3-Bna"/>
+                                        <outlet property="routeLabel" destination="hay-KK-YrK" id="vWa-TD-xe7"/>
+                                        <outlet property="timeLabel" destination="eOv-hc-3cR" id="b7N-Q3-Rhq"/>
                                     </connections>
                                 </tableRow>
                             </items>
                         </table>
+                        <label alignment="center" verticalAlignment="center" text="Laster..." id="tVc-CL-sk2"/>
                     </items>
-                    <menu key="menu" id="bgc-aZ-yVN">
-                        <items>
-                            <menuItem title="Refresh" icon="repeat" id="hdZ-sT-4of">
-                                <connections>
-                                    <action selector="refreshButton" destination="iGv-Od-uql" id="Naq-wh-NUB"/>
-                                </connections>
-                            </menuItem>
-                        </items>
-                    </menu>
                     <connections>
-                        <outlet property="busTableFromCity" destination="HbK-Oz-LHI" id="Xfw-Js-eVA"/>
-                        <outlet property="busTableToCity" destination="FPr-xd-6ff" id="geH-QB-1td"/>
-                        <outlet property="loadingLabel" destination="tVc-CL-sk2" id="xX8-BS-ZFM"/>
+                        <outlet property="busTableFromCity" destination="oeH-8b-d1j" id="bjd-3Q-aQm"/>
+                        <outlet property="busTableToCity" destination="FPr-xd-6ff" id="hW3-0I-XYt"/>
+                        <outlet property="fromCityLabel" destination="nGa-Tc-Bgt" id="pt6-c4-yWM"/>
+                        <outlet property="loadingLabel" destination="tVc-CL-sk2" id="qJ1-IN-WmR"/>
+                        <outlet property="toCityLabel" destination="apm-AE-YIJ" id="qT7-fr-4c2"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="371" y="332"/>
+            <point key="canvasLocation" x="459" y="190.25"/>
         </scene>
     </scenes>
 </document>

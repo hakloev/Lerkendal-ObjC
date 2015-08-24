@@ -113,7 +113,7 @@
 
 - (void)getNextRequestedUpdateDateWithHandler:(void(^)(NSDate * __nullable updateDate))handler {
     // Call the handler with the date when you would next like to be given the opportunity to update your complication content
-    handler([NSDate dateWithTimeIntervalSinceNow:60*15]); // Update every fifteen minutes
+    handler([NSDate dateWithTimeIntervalSinceNow:60*30]); // Update every half hour
 }
 
 #pragma mark - Placeholder Templates

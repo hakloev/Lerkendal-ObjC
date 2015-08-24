@@ -1,5 +1,5 @@
 //
-//  BusRowController.h
+//  BusTimeRowController.h
 //  Lerkendal-ObjC
 //
 //  Created by Håkon Løvdal on 15/08/15.
@@ -10,7 +10,7 @@
 
 #import <WatchKit/WatchKit.h>
 
-@interface BusRowController : NSObject
+@interface BusTimeRowController : NSObject
 
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *routeLabel;
 
@@ -18,5 +18,6 @@
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *realtimeLabel;
 
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *destinationLabel;
+
 
 @end
